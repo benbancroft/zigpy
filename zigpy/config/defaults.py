@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import typing
+from typing import Final
 
 import zigpy.types as t
 
@@ -50,3 +51,12 @@ CONF_TOPO_SCAN_PERIOD_DEFAULT = 4 * 60  # 4 hours
 CONF_TOPO_SCAN_ENABLED_DEFAULT = True
 CONF_TOPO_SKIP_COORDINATOR_DEFAULT = False
 CONF_WATCHDOG_ENABLED_DEFAULT = True
+
+REPORT_CONFIG_MIN_INT: Final[int] = 30
+REPORT_CONFIG_MAX_INT: Final[int] = 900
+REPORT_CONFIG_RPT_CHANGE: Final[int] = 1
+REPORT_CONFIG_DEFAULT: tuple[int, int, int] = (
+    REPORT_CONFIG_MIN_INT,
+    REPORT_CONFIG_MAX_INT,
+    REPORT_CONFIG_RPT_CHANGE,
+)
